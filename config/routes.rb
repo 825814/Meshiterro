@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # get 'postimages/index'
   # get 'postimages/show'
   resources :post_images, only: [:new, :create, :index, :show, :destroy]
-  resources :users, only: [:show, :edit]
+  resources :users, only: [:show, :edit, :update]
   devise_for :users
   root to: "homes#top"
   get 'homes/about', as: 'about'
